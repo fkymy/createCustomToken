@@ -1,0 +1,10 @@
+select blaze plan
+
+cd functions/
+npm run-script lint
+npm run-script build
+cat lib/index.js
+
+firebase serve --only functions
+
+firebase deploy --only functions
