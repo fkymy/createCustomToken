@@ -1,9 +1,12 @@
 select blaze plan
+set .firebaserc project
 
 cd functions/
 npm run-script lint
 npm run-script build
 cat lib/index.js
+
+firebase functions:config:set line.channelid=XXXXXXXXXX
 
 firebase serve --only functions
 
